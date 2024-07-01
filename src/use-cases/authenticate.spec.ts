@@ -1,7 +1,5 @@
 import { InMemoryUsersRepository } from '@/repositories/in-memory/in-memory-users-repository'
-import { RegisterUserUseCase } from './register-user'
-import { compare, hash } from 'bcryptjs'
-import { UserAlreadyExistsError } from './errors/user-already-exists'
+import { hash } from 'bcryptjs'
 import { AuthenticateUseCase } from './authenticate'
 import { InvalidCredentialsError } from './errors/invalid-credentials'
 

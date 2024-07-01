@@ -1,10 +1,13 @@
+import 'dotenv/config'
+
 import { z } from 'zod'
 
 const envSchema = z.object({
-  CLOUDFLARE_ACCOUNT_TOKEN: z.string(),
+  JWT_SECRET: z.string(),
   CLOUDFLARE_BUCKET_NAME: z.string(),
+  CLOUDFLARE_ENDPOINT: z.string().url(),
   CLOUDFLARE_ACCESS_KEY_ID: z.string(),
-  CLOUDFLARE_ACCESS_KEY_SECRET: z.string(),
+  CLOUDFLARE_SECRET_ACCESS_KEY: z.string(),
   PORT: z.coerce.number().optional().default(3333),
 })
 
