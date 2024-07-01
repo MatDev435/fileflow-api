@@ -11,7 +11,7 @@ describe('Register User (E2E)', () => {
   })
 
   test('[POST] /register', async () => {
-    const response = await request(app.server).post('/register').send({
+    const response = await request(app.server).post('/users').send({
       name: 'John Doe',
       email: 'johndoe@example.com',
       password: '123456',
